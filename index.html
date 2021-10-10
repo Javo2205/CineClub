@@ -1,1 +1,154 @@
-<h1>Hello World</h1>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&family=Roboto&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <title>CINECLUB</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <article>
+                <section class="btn-menu">
+                    <img src="assets/menu.svg" onclick="openSlideMenu()" alt="hamburguer-menu">
+                </section>
+                <section class="stn-title">
+                    <img src="assets/cineclub.svg" alt="">
+                </section>
+                <section class="shopping-cart">
+                    <img src="assets/bag.svg" alt="shopping-cart">
+                    <div class="items">0</div>
+                </section>
+            </article>
+        </nav>
+        <span class="badge">New Release</span>
+    </header>
+
+    <div id="side-nav" class="side-nav">
+        <a onclick="closeSlideMenu()">
+            <div>
+                <span>&times</span>
+            </div>
+        </a>
+        <a>Coming Soon</a>
+        <hr>
+        <a><b>Now Playing</b></a>
+        <hr>
+        <a>Locations</a>
+        <hr>
+        <a>Parties & Events</a>
+    </div>
+
+    <main>
+        <article>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img class="animate__animated animate__fadeInLeftBig" src="assets/problem_solving.svg" width="100%" height="100%" alt="" srcset="">
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <h1 class="animate__animated animate__fadeInTopRight">Al parecer te encuentras en una resolucion diferente.</h1>
+                        <h5 class="animate__animated animate__fadeInBottomRight">Entra desde tu celular o cambia tu resolucion para resolver el problema! </h5>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article>
+            <section class="main-content">
+                <h6>MARVEL 2021</h6>
+                <h2>Shang-chi and the legend of the ten rings</h2>
+                <p>Shang-Chi (Simu Liu) must confront the past he thought
+                    he left behind when he is drawn into the web of the mysterious
+                    Ten Rings organization.</p>
+            </section>
+        </article>
+        <article class="events">
+            <table style="width: 100%;">
+                <tr>
+                    <td><button onclick="openTicketsTime()" class="btn-tickets">Buy a ticket</button></td>
+                    <td><span onclick="openWatchTrailer()">Watch trailer</span></td>
+                </tr>
+            </table>
+        </article>
+    </main>
+
+    <div id="tickets-time" class="tickets-time">
+        <a onclick="closeTicketsTime()">
+            <div>
+                <span>&times</span>
+            </div>
+        </a>
+        <div class="container">
+            <h3>Choose a time</h3>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">5:00 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">5:20 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">5:45 pm</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">6:00 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">6:20 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">6:45 pm</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">7:00 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">7:20 pm</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-outline-secondary">7:45 pm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="watch-trailer" class="watch-trailer">
+        <a onclick="closeWatchTrailer()">
+            <div>
+                <span>&times</span>
+            </div>
+        </a>
+        <div class="container">
+            <h3>Shang-chi and the legend of the ten rings</h3>
+            <iframe width="100%" height="30%" src="https://www.youtube.com/embed/8YjFbMbfXaQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
